@@ -12,7 +12,11 @@ const ages = students.map(student => student.age);
 const totalAge = ages.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 const av_age = totalAge / ages.length;
 const names_upper = names.join(",").toUpperCase()
+const youngest_student = students.reduce((young, current) =>{return young.age<current.age?young:current},students[0])
+
+
 console.log(names)
 console.log(succeeding_students)
 console.log(av_age)
 console.log(names_upper)
+console.log(youngest_student)
